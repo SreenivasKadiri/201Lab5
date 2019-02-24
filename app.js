@@ -11,8 +11,8 @@ function sum(a, b) { //eslint-disable-line
     var answer = 'The sum of '+ a + ' and '+ b +' is '+ sum +'.';
     console.log('Sum value is: ',sum);
     console.log('answer value is: ',answer);
-    var returValue = [sum, answer];
-return returValue;
+    //var returValue = [sum, answer];
+return [sum, answer];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -28,11 +28,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+    var value = a * b;
+    var answer = 'The product of '+ a +' and '+ b + ' is '+value+'.';
+    console.log('Mul value is: ',value);
+    console.log('answer value is: ',answer);
+    return [value, answer];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
