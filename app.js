@@ -9,10 +9,9 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) { //eslint-disable-line
     var sum = a + b;
     var answer = 'The sum of '+ a + ' and '+ b +' is '+ sum +'.';
-    console.log('Sum value is: ',sum);
-    console.log('answer value is: ',answer);
-    //var returValue = [sum, answer];
-return [sum, answer];
+    //console.log('Sum value is: ',sum);
+    //console.log('answer value is: ',answer);
+    return [sum, answer];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -30,8 +29,8 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) { //eslint-disable-line
     var value = a * b;
     var answer = 'The product of '+ a +' and '+ b + ' is '+value+'.';
-    console.log('Mul value is: ',value);
-    console.log('answer value is: ',answer);
+    //console.log('Mul value is: ',value);
+    //console.log('answer value is: ',answer);
     return [value, answer];
 }
 
@@ -50,11 +49,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    //var sum = (sum((sum(a , b)[0]), c)[0]);
+    //var sum = sum(a,b)[0];
+    var sumValue = sum(sum(a,b)[0],c)[0];
+    //console.log('the sum value working',sumValue);
+    var mulValue = multiply(multiply(a, b)[0], c)[0];
+    //console.log('the mulValue value working',mulValue);
+    var answerSum = a+' and '+ b +' and '+ c + ' sum to '+sumValue+'.';
+    var answerMul = 'The product of '+ a + ' and '+ b + ' and '+ c +' is '+mulValue+'.';
+    //console.log('the return value:'+ answerSum + 'second value: '+answerMul);
+    return [sumValue, mulValue, answerSum, answerMul ];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
